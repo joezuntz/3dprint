@@ -78,7 +78,7 @@ def healpix_to_mesh(healpix_map, vmin=None, vmax=None, radius_variation=0.05, he
 def example():
     T = healpy.read_map('wmap_ilc_9yr_v5.fits')
     T = healpy.ud_grade(T, nside_out=32)
-    M = healpix_to_mesh(T, hemisphere='north')
+    M = healpix_to_mesh(T, hemisphere='both')
     M.save('wmap_ilc_9yr_v5.stl')
 
 
